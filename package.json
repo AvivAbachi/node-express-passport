@@ -4,7 +4,7 @@
 	"author": "Aviv Abachi",
 	"description": "",
 	"main": "app.js",
-	"license": "ISC",
+	"license": "MIT",
 	"scripts": {
 		"start": "node app.js",
 		"dev": "nodemon app.js"
