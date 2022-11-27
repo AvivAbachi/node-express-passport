@@ -17,12 +17,3 @@ To open the application run in development mode:
 ```
 $ npm run dev
 ```
-
-### License
-
-- MIT
-
-### Author
-
-- Aviv Abachi
-- Github: [@AvivAbachi](https://github.com/AvivAbachi/)
