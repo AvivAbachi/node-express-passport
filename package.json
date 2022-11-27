@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "node app.js",
-		"dev": "nodemon app.js"
+		"dev": "Set NODE_ENV=development && nodemon app.js"
 	},
 	"dependencies": {
 		"bcrypt": "^5.1.0",

@@ -22,6 +22,9 @@ require('./config/passport');
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
-app.use(logger);
+
+if (process.env.NODE_ENV === 'development') {
+	app.use(logger);
+}
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
