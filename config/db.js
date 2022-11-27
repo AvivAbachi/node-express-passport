@@ -1,7 +1,7 @@
 const { genPassword } = require('../libs/passwordUtils');
 
 class DB {
-	users = [];
+	#users = [];
 
 	constructor() {
 		this.AddUser('AvivAb', '1234');
@@ -10,8 +10,8 @@ class DB {
 	AddUser(username, password) {
 		const user = this.GetUserByName(username);
 		if (!user) {
-			this.users.push({
-				id: this.users.length + 1,
+			this.#users.push({
+				id: this.#users.length + 1,
 				username,
 				password: genPassword(password),
 			});
@@ -22,11 +22,11 @@ class DB {
 	}
 
 	GetUserByName(username) {
-		return this.users.find((u) => u.username == username);
+		return this.#users.find((u) => u.username == username);
 	}
 
 	GetUserById(id) {
-		return this.users.find((u) => u.id === id);
+		return this.#users.find((u) => u.id === id);
 	}
 }
 
