@@ -27,9 +27,9 @@ module.exports.getRegister = (req, res) => {
 module.exports.postRegister = (req, res) => {
 	const username = req.body.username;
 	const password = req.body.password;
-	const IsValid = Users.AddUser(username, password);
+	const isAdd = Users.AddUser(username, password);
 
-	if (IsValid) {
+	if (isAdd) {
 		res.redirect('/login');
 	} else {
 		res.redirect('/register');
